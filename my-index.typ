@@ -53,8 +53,7 @@ figure(
             }
         }
 
-
-        let sortedkeys = words.keys().sorted()
+        let sortedkeys = words.keys().sorted(key: x => lower(x))
 
         let register = ""
         if title != none {
@@ -65,7 +64,7 @@ figure(
                 #let formattedPageNumbers = words.at(sk).map(en => {
                     link((page: en.page, x:0pt, y:0pt), text(fill: black, str(en.page)))
                 })
-                    #let firstCharacter = sk.first()
+                    #let firstCharacter = upper(sk.first())
                     #if firstCharacter != register {
                         v(1em, weak:true)
                         box(width: 100%, fill: main-color.lighten(60%), inset: 5pt, align(center, text(size: 1.1em, weight: "bold", firstCharacter)))
