@@ -563,7 +563,7 @@
     #outline-small-width-state.update(x => outline-small-width)
     //#place(top, image("images/background2.jpg", width: 100%, height: 50%))
     #if cover != none {
-      set image(width: 100%, height: 100%)
+      set image(width: 100%, height: 105%)
       place(bottom, cover)
     }
     #if logo != none {
